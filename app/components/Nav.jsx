@@ -13,8 +13,8 @@ export default function Nav() {
     console.log(toggleNav);
   };
   return (
-    <nav className="fixed w-full h-20 shadow-xl z-[100]">
-      {toggleNav && (
+    <nav className={`fixed w-full h-20 shadow-xl z-[100] transition-opacity duration-700 ease-out`}>
+      {/* {!toggleNav && ( */}
         <div className=" px-2 w-full h-full flex gap-4 items-center justify-between 2xl:px-16 ">
           <div className="">
             <Image
@@ -48,16 +48,16 @@ export default function Nav() {
               </Link>
             </ul>
             <div onClick={navToggle} className="md:hidden">
-              <AiOutlineMenu size={25} />
+              {!toggleNav ? <AiOutlineMenu size={25} /> : ""}
             </div>
           </div>
         </div>
-      )}
+      {/* )} */}
 
-      {!toggleNav && (
-        <div className="fixed left-0 top-0 w-full h-screen bg-black/70">
-          <div className="fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-3 ease-in duration-500">
-            <div>
+      {/* {toggleNav && ( */}
+      <div className={`fixed left-0 top-0 w-full h-screen bg-black/70 transition-opacity duration-500 ease-in  ${toggleNav ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
+        <div className="fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-3">
+            <div className="">
               <div className="flex w-full items-center justify-between">
                 <Image src="/images/logo.png" width="150" height="35" alt="" />
                 <div
@@ -75,7 +75,7 @@ export default function Nav() {
             </div>
             <div className="py-4 flex flex-col">
               <ul className="uppercase ">
-                <Link href={"/"}>
+                <Link href={"/about"}>
                   <li className="py-4 text-sm">About</li>
                 </Link>
                 <Link href={"/"}>
@@ -94,26 +94,22 @@ export default function Nav() {
                 </p>
                 <div className="flex items-center justify-between my-4 w-full sm:w-[80%] m-auto">
                   <div
-                    className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover
-                :scale-105 ease-in duration-200"
+                    className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-200"
                   >
                     <FaLinkedinIn />
                   </div>
                   <div
-                    className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover
-                :scale-105 ease-in duration-200"
+                    className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-200"
                   >
                     <FaGithub />
                   </div>
                   <div
-                    className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover
-                :scale-105 ease-in duration-200"
+                    className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-200"
                   >
                     <AiOutlineMail />
                   </div>
                   <div
-                    className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover
-                :scale-105 ease-in duration-200"
+                    className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-200"
                   >
                     <BsFillPersonLinesFill />
                   </div>
@@ -122,7 +118,7 @@ export default function Nav() {
             </div>
           </div>
         </div>
-      )}
+      {/* )} */}
     </nav>
   );
 }
