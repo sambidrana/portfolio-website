@@ -22,7 +22,7 @@ export default function AboutPage() {
         </div>
         <div className="w-full h-auto m-auto shadow-xl shadow-gray-400  flex items-center justify-center p-2 hover:scale-105 ease-in duration-300 ">
             {/* <Image src={"/images/profile1.png"} alt="/" width={2525} height={2525} /> */}
-            <img src={"/images/IMG20220416115510.jpg"} alt="/"  />
+            <img src={"/images/profile1.png"} alt="/"  />
         </div>
       </div>
     </div>
