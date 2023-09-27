@@ -13,7 +13,7 @@ export default function Nav() {
     console.log(toggleNav);
   };
   return (
-    <nav className={`fixed w-full h-20 shadow-xl z-[100] transition-opacity duration-700 ease-out`}>
+    <nav className={`fixed w-full h-20 shadow-xl z-100  bg-[#ecf0f3] transition-opacity duration-700 ease-out`}>
       {/* {!toggleNav && ( */}
         <div className=" px-2 w-full h-full flex gap-4 items-center justify-between 2xl:px-16 ">
           <div className="">
@@ -27,22 +27,22 @@ export default function Nav() {
           <div>
             <ul className="hidden md:flex">
               <Link href={"/about"}>
-                <li className="ml-10 text-sm uppercase hover:border-b">
+                <li className="ml-10 text-sm uppercase hover:border-b hover:scale-110 duration-300">
                   About
                 </li>
               </Link>
               <Link href={"/contact"}>
-                <li className="ml-10 text-sm uppercase hover:border-b">
+                <li className="ml-10 text-sm uppercase hover:border-b hover:scale-110 duration-300">
                   Skills
                 </li>
               </Link>
               <Link href={"/contact"}>
-                <li className="ml-10 text-sm uppercase hover:border-b">
+                <li className="ml-10 text-sm uppercase hover:border-b hover:scale-110 duration-300">
                   Projects
                 </li>
               </Link>
               <Link href={"/contact"}>
-                <li className="ml-10 text-sm uppercase hover:border-b">
+                <li className="ml-10 text-sm uppercase hover:border-b hover:scale-110 duration-300">
                   Contact
                 </li>
               </Link>
@@ -92,7 +92,7 @@ export default function Nav() {
                 <p className="uppercase tracking-widest text-[#5651e5]">
                   Let's connect
                 </p>
-                <div className="flex items-center justify-between my-4 w-full sm:w-[80%] m-auto">
+                <div className="flex items-center justify-between my-4 m-auto w-[80%] ">
                   <div
                     className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-200"
                   >
