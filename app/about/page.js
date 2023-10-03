@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <div className="w-full  md:h-screen p-2 flex items-center justify-between py-16 ">
+    <div id="about" className="w-full  md:h-screen p-2 flex items-center justify-between py-16 ">
       <div className="max-w-[1240px] m-auto md:grid grid-cols-2 gap-8">
         <div className="col-span-1 p-2">
           <p className="uppercase text-xl tracking-widest text-[#5651e5]">About</p>

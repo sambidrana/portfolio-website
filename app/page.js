@@ -2,6 +2,7 @@
 import AboutPage from "./about/page";
 import Featured from "./components/Featured";
 import Nav from "./components/Nav"
+import Contact from "./contact/page";
 import ProjectPage from "./projects/page";
 import { SkillsPage } from "./skills/page";
 import { SocialPage } from "./social/page";
@@ -14,6 +15,7 @@ export default function Home() {
     <AboutPage />
     <SkillsPage />
     <ProjectPage />
+    <Contact />
     {/* <SocialPage /> */}
 
     </>
