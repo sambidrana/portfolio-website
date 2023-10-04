@@ -1,6 +1,5 @@
-import { ProjectLayout } from "../components/ProjectLayout";
 import projects from "./projectData";
-
+import ProjectLayout from "../components/ProjectLayout";
 export default function ProjectPage() {
 
   return (

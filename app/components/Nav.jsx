@@ -82,7 +82,7 @@ export default function Nav() {
         }`}
       >
         <div className="fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-3">
-          <div className="">
+          <div >
             <div className="flex w-full items-center justify-between">
               <Link href={"/#featured"}>
                 <Image src="/images/logo.png" width="150" height="35" alt="" />
@@ -167,7 +167,7 @@ export default function Nav() {
                   </div>
                 </a>
 
-                <div class="relative group inline-block">
+                <div className="relative group inline-block">
                   <a
                     href="/resume/Sambid_RANA_Resume.pdf"
                     download

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export const SkillsLayout = ({src, name}) => {
+export default function SkillsLayout ({src, name}) {
   return (
       <div className="py-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
         <div className="grid grid-cols-2 gap-4 justify-center items-center">

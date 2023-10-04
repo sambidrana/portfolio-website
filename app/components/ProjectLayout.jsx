@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
-export const ProjectLayout = ({title, backgroundImg, tech, projectUrl, params}) => {
+export default function ProjectLayout ({title, backgroundImg, tech, projectUrl, params}) {
   return (
     <div className=" flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-[#6e69f2] to-[#709dff] transition-scale duration-300 hover:scale-105 ">
       <Image
