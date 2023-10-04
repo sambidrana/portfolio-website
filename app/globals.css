@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 /* NAV */
+.no-arrows::-webkit-inner-spin-button,
+.no-arrows::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.no-arrows {
+  -moz-appearance: textfield; /* For Firefox */
+}
 
 :root {
   /* --foreground-rgb: 0, 0, 0;
@@ -23,6 +32,7 @@
 }
 html {
   scroll-behavior: smooth;
+  
 }
 body {
   @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide;
@@ -47,4 +57,42 @@ li {
 }
 button {
   @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white;
+}
+
+
+
+/* Tooltip Container */
+.tooltip {
+  font-size: .8rem;
+  visibility: hidden;
+  background-color: #555; /* Dark background for tooltip */
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 1;
+  bottom: -100%; /* Position tooltip above the parent element */
+  left: 50%;
+  margin-left: -60px; /* Move the tooltip left by half its width */
+  opacity: 0; /* Make it invisible */
+  transition: opacity 0.3s;
+}
+
+/* Tooltip Arrow (at the bottom of the tooltip) */
+/* .tooltip::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: pink transparent transparent transparent;
+} */
+
+/* Show Tooltip on Hover */
+.rounded-full:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
 }

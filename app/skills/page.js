@@ -16,6 +16,8 @@ export const SkillsPage = () => {
             <SkillsLayout src="javascript.png" name="JavaScript" />
             <SkillsLayout src="react.png" name="React" />
             <SkillsLayout src="nextjs.png" name="NextJS" />
+            <SkillsLayout src="ruby.jpeg" name="Ruby" />
+            <SkillsLayout src="rails.png" name="Ruby on Rails" />
             <SkillsLayout src="tailwind.png" name="Tailwind" />
             <SkillsLayout src="firebase.png" name="Firebase" />
             <SkillsLayout src="aws.png" name="AWS" />

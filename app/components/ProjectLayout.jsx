@@ -4,7 +4,7 @@ import React from "react";
 
 export const ProjectLayout = ({title, backgroundImg, tech, projectUrl, params}) => {
   return (
-    <div className=" relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-[#6e69f2] to-[#709dff] transition-scale duration-300 hover:scale-105 ">
+    <div className=" flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-[#6e69f2] to-[#709dff] transition-scale duration-300 hover:scale-105 ">
       <Image
         className="p-2 group-hover:opacity-10  "
         src={backgroundImg}

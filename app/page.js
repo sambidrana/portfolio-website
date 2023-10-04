@@ -5,7 +5,6 @@ import Nav from "./components/Nav"
 import Contact from "./contact/page";
 import ProjectPage from "./projects/page";
 import { SkillsPage } from "./skills/page";
-import { SocialPage } from "./social/page";
 export default function Home() {
 
   return (
@@ -16,7 +15,6 @@ export default function Home() {
     <SkillsPage />
     <ProjectPage />
     <Contact />
-    {/* <SocialPage /> */}
 
     </>
   )

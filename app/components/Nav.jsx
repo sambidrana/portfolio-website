@@ -8,15 +8,17 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 export default function Nav() {
   const [toggleNav, setToggleNav] = useState(false);
   const [shadow, setShadow] = useState(false);
+  const [navBg, setNavBg] = useState("#ecf0f3");
+  const [linkColor, setLinkColor] = useState("#1f2937");
 
   const navToggle = () => {
     setToggleNav((currentState) => !currentState);
-    console.log(toggleNav);
+    // console.log(toggleNav);
   };
 
   useEffect(() => {
     const handleShadow = () => {
-      if (window.scrollY >= 90) {
+      if (window.scrollY >= 40) {
         setShadow(true);
       } else {
         setShadow(false);
@@ -29,8 +31,8 @@ export default function Nav() {
     <nav
       className={
         shadow
-          ? `fixed w-full h-20 shadow-xl z-100 bg-[#ecf0f3] transition-opacity duration-700 ease-out`
-          : `fixed w-full h-20 z-100 bg-[#ecf0f3]`
+          ? `fixed w-full h-20 shadow-xl  z-100  bg-[#ecf0f3] transition-opacity duration-700 ease-out`
+          : `fixed w-full h-20 z-100`
       }
     >
       {/* {!toggleNav && ( */}
@@ -103,16 +105,36 @@ export default function Nav() {
           <div className="py-4 flex flex-col">
             <ul className="uppercase ">
               <Link href={"/#about"}>
-                <li onClick={() => setToggleNav(false)} className="py-4 text-sm">About</li>
+                <li
+                  onClick={() => setToggleNav(false)}
+                  className="py-4 text-sm"
+                >
+                  About
+                </li>
               </Link>
               <Link href={"/#skills"}>
-                <li onClick={() => setToggleNav(false)} className="py-4 text-sm">Skills</li>
+                <li
+                  onClick={() => setToggleNav(false)}
+                  className="py-4 text-sm"
+                >
+                  Skills
+                </li>
               </Link>
               <Link href={"/#projects"}>
-                <li onClick={() => setToggleNav(false)} className="py-4 text-sm">Project</li>
+                <li
+                  onClick={() => setToggleNav(false)}
+                  className="py-4 text-sm"
+                >
+                  Project
+                </li>
               </Link>
               <Link href={"/#contact"}>
-                <li onClick={() => setToggleNav(false)} className="py-4 text-sm">Contact</li>
+                <li
+                  onClick={() => setToggleNav(false)}
+                  className="py-4 text-sm"
+                >
+                  Contact
+                </li>
               </Link>
             </ul>
             <div className="pt-40">
@@ -120,17 +142,44 @@ export default function Nav() {
                 Let's connect
               </p>
               <div className="flex items-center justify-between my-4 m-auto w-[80%] ">
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-200">
-                  <FaLinkedinIn />
-                </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-200">
-                  <FaGithub />
-                </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-200">
-                  <AiOutlineMail />
-                </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-200">
-                  <BsFillPersonLinesFill />
+                <a
+                  href="https://www.linkedin.com/in/sambidsjbrana"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-200">
+                    <FaLinkedinIn />
+                    <span className="tooltip">LinkedIn</span>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/sambidrana"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-200">
+                    <FaGithub />
+                    <span className="tooltip">GitHub</span>
+                  </div>
+                </a>
+                <a href="/#contact" rel="noreferrer">
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-200">
+                    <AiOutlineMail />
+                    <span className="tooltip">Send Mail</span>
+                  </div>
+                </a>
+
+                <div class="relative group inline-block">
+                  <a
+                    href="/resume/Sambid_RANA_Resume.pdf"
+                    download
+                    rel="noreferrer"
+                  >
+                    <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-200">
+                      <BsFillPersonLinesFill />
+                      <span className="tooltip">Download Resume</span>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -141,3 +190,4 @@ export default function Nav() {
     </nav>
   );
 }
+

@@ -1,13 +1,29 @@
 import { AiOutlineMail } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import {HiOutlineChevronDoubleUp} from "react-icons/hi"
+import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Contact() {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    // e.preventDefault();
+    setName("");
+    setPhone("");
+    setEmail("");
+    setSubject("");
+    setMessage("");
+  };
+
   return (
     <>
-      <div  id="contact" className="w-full lg:h-screen">
+      <div id="contact" className="w-full lg:h-screen">
         <div className="max-w-[1240px] m-auto px-2 py-16 w-full ">
           <p className="text-xl tracking-widest uppercase text-[#5651e5]">
             Contact
@@ -35,18 +51,37 @@ export default function Contact() {
                 <p className="uppercase pt-8">Connect With Me</p>
                 <div>
                   <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
-                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-200">
-                      <FaLinkedinIn />
-                    </div>
-                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-200">
-                      <FaGithub />
-                    </div>
-                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-200">
-                      <AiOutlineMail />
-                    </div>
-                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-200">
-                      <BsFillPersonLinesFill />
-                    </div>
+                    <a
+                      href="https://www.linkedin.com/in/sambidsjbrana"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-200">
+                        <FaLinkedinIn />
+                        <span className="tooltip">LinkedIn</span>
+                      </div>
+                    </a>
+                    <a
+                      href="https://github.com/sambidrana"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-200">
+                        <FaGithub />
+                        <span className="tooltip">GitHub</span>
+                      </div>
+                    </a>
+
+                    <a
+                      href="/resume/Sambid_RANA_Resume.pdf"
+                      download
+                      rel="noreferrer"
+                    >
+                      <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-200">
+                        <BsFillPersonLinesFill />
+                        <span className="tooltip">Download Resume</span>
+                      </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -56,14 +91,17 @@ export default function Contact() {
             <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
               <div className="p-4">
                 <form
-                //   action="https://getform.io/f/08ebcd37-f5b5-45be-8c13-714f011ce060"
+                  action="https://getform.io/f/73bd4c75-9c01-4021-90ef-2f38ba60380d"
                   method="POST"
                   encType="multipart/form-data"
+                  onSubmit={handleSubmit}
                 >
                   <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                     <div className="flex flex-col">
                       <label className="uppercase text-sm py-2">Name</label>
                       <input
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                         className="border-2 rounded-lg p-3 flex border-gray-300"
                         type="text"
                         name="name"
@@ -74,8 +112,10 @@ export default function Contact() {
                         Phone Number
                       </label>
                       <input
-                        className="border-2 rounded-lg p-3 flex border-gray-300"
-                        type="text"
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        className="border-2 rounded-lg p-3 flex border-gray-300 no-arrows"
+                        type="number"
                         name="phone"
                       />
                     </div>
@@ -83,6 +123,8 @@ export default function Contact() {
                   <div className="flex flex-col py-2">
                     <label className="uppercase text-sm py-2">Email</label>
                     <input
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       className="border-2 rounded-lg p-3 flex border-gray-300"
                       type="email"
                       name="email"
@@ -91,6 +133,8 @@ export default function Contact() {
                   <div className="flex flex-col py-2">
                     <label className="uppercase text-sm py-2">Subject</label>
                     <input
+                      value={subject}
+                      onChange={(e) => setSubject(e.target.value)}
                       className="border-2 rounded-lg p-3 flex border-gray-300"
                       type="text"
                       name="subject"
@@ -99,6 +143,8 @@ export default function Contact() {
                   <div className="flex flex-col py-2">
                     <label className="uppercase text-sm py-2">Message</label>
                     <textarea
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
                       className="border-2 rounded-lg p-3 border-gray-300"
                       rows="10"
                       name="message"
@@ -113,9 +159,12 @@ export default function Contact() {
           </div>
           <div className="flex justify-center py-12">
             <Link href={"/#featured"}>
-            <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-200">
-                    <HiOutlineChevronDoubleUp className="text-[#5651e5]" size={30} />
-                </div>
+              <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-200">
+                <HiOutlineChevronDoubleUp
+                  className="text-[#5651e5]"
+                  size={30}
+                />
+              </div>
             </Link>
           </div>
         </div>
