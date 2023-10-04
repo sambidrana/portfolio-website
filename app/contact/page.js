@@ -1,9 +1,10 @@
-import { AiOutlineMail } from "react-icons/ai";
+"use client"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import Link from "next/link";
 import { useState } from "react";
+
 
 export default function Contact() {
   const [name, setName] = useState("");
