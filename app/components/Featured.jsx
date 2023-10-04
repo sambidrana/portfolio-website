@@ -9,10 +9,10 @@ const Featured = () => {
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
           <p className="uppercase text-sm tracking-widest text-gray-600">
-            From concept to code, let's make it happen!
+          {"From concept to code, let's make it happen!"}
           </p>
           <h1 className="py-4 text-gray-700">
-            Hi, I'm <span className="text-[#5651e5]"> Sambid</span>
+          {"Hi, I'm"} <span className="text-[#5651e5]">Sambid</span>
           </h1>
           <h2 className="py-4 text-gray-700">Software Engineer</h2>
           <p className="py-4 text-gray-600 max-w-[70%] m-auto">

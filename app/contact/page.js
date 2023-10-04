@@ -4,6 +4,7 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 
 
 export default function Contact() {
@@ -34,18 +35,19 @@ export default function Contact() {
             {/* LEFT */}
             <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4">
               <div className="lg:p-4 h-auto">
-                <img
+                <Image
                   className="rounded-xl hover:scale-105 ease-in duration-300"
                   src="/images/get-in-touch.png"
                   alt="Get in Touch"
+                  width={500}
+                  height={500}
                 />
               </div>
               <div>
                 <h2 className="py-2">Sambid Rana</h2>
-                <p>Front-End Developer</p>
+                <p>{"Front-End Developer"}</p>
                 <p className="py-4">
-                  I am available for freelance or full-time positions. Contact
-                  me and let's talk
+                  {"I am available for freelance or full-time positions. Contact me and let's talk"}
                 </p>
               </div>
               <div>

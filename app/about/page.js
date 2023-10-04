@@ -31,7 +31,7 @@ export default function AboutPage() {
           </a>
         </div>
         <div className="w-full h-[550px] m-auto flex items-center justify-center p-2 ">
-          <img className="w-[70%] hover:scale-105 ease-in duration-100" src={"/images/aboutProfile.webp"} alt="Profile" />
+          <Image className="w-[70%] hover:scale-105 ease-in duration-100" src={"/images/aboutProfile.webp"} alt="Profile" width={500} height={500} />
         </div>
       </div>
     </div>
