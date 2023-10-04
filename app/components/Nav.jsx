@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -8,12 +9,9 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 export default function Nav() {
   const [toggleNav, setToggleNav] = useState(false);
   const [shadow, setShadow] = useState(false);
-  const [navBg, setNavBg] = useState("#ecf0f3");
-  const [linkColor, setLinkColor] = useState("#1f2937");
 
   const navToggle = () => {
     setToggleNav((currentState) => !currentState);
-    // console.log(toggleNav);
   };
 
   useEffect(() => {
