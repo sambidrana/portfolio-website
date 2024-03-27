@@ -1,5 +1,26 @@
 const projects = [
   {
+    slug: "the-bulldog-babysitter",
+    title: "The Bulldog Babysitter",
+    body: "The Bulldog Babysitter is a custom web application built with Next.js, designed exclusively for the Bulldog Babysitter family's existing customers. This platform simplifies how clients book appointments online and offers an intuitive admin panel for managing bookings and boarding details efficiently.",
+    image: "/images/projects/the-bulldog-babysitter.png",
+    gitLink: "https://github.com/sambidrana/bulldog-babysitter-client",
+    demoLink: "https://www.thebulldogbabysitter.com/",
+    mainTechnology: ["NEXT.JS", "Mongodb", "AWS S3"],
+    technologies: [
+      "Next.js",
+      "React",
+      "TailwindCSS",
+      "MongoDB",
+      "Mongoose",
+      "Styled Components",
+      "Next-Auth",
+      "AWS SDK (S3)",
+      "Stripe",
+      "next-connect",
+    ],
+  },
+  {
     slug: "nks-fresh",
     title: "NKS-Fresh",
     body: "NKS-Fresh is an avant-garde e-commerce platform dedicated to delivering the freshest and finest fruits right to your doorstep. With a user-centric design and an intuitive interface, shopping for nutritious fruits has never been easier or more delightful.",
@@ -60,7 +81,7 @@ const projects = [
     body: "I spearheaded the development of an interactive web application that centered around the world of football, leveraging the capabilities of Ruby, JavaScript, and the Bootstrap framework. The primary objective was to offer users exhaustive and up-to-date information about football players and the sport. One of the standout features of this application is the detailed player profiles, which not only provide insights into their career trajectories but also highlight their current club affiliations. Additionally, the platform keeps tabs on players' representations and performances with their respective national teams. Continuous updates and a user-friendly interface ensure that fans and enthusiasts have access to the latest developments and statistics at their fingertips.",
     image: "/images/projects/one-football.jpg",
     gitLink: "https://github.com/sambidrana/footballapp",
-    mainTechnology: ["Ruby on Rails","JavaScript", "Bootstrap"],
+    mainTechnology: ["Ruby on Rails", "JavaScript", "Bootstrap"],
     technologies: [
       "Ruby",
       "JavaScript",

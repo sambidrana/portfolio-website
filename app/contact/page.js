@@ -14,14 +14,14 @@ export default function Contact() {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
-    // e.preventDefault();
-    setName("");
-    setPhone("");
-    setEmail("");
-    setSubject("");
-    setMessage("");
-  };
+  // const handleSubmit = (e) => {
+  //   // e.preventDefault();
+  //   setName("");
+  //   setPhone("");
+  //   setEmail("");
+  //   setSubject("");
+  //   setMessage("");
+  // };
 
   return (
     <>
@@ -97,7 +97,7 @@ export default function Contact() {
                   action="https://getform.io/f/73bd4c75-9c01-4021-90ef-2f38ba60380d"
                   method="POST"
                   encType="multipart/form-data"
-                  onSubmit={handleSubmit}
+                  // onSubmit={handleSubmit}
                 >
                   <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                     <div className="flex flex-col">
